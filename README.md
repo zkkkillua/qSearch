@@ -1,12 +1,18 @@
 # qSearch
 
+## 声明
+本repository为sdu信息检索技术的课程实验。  
+实验中使用到的data/目录下的数据集以及bm25.py示例模型由山东大学信息检索实验室提供。  
+sdu Zacky Lee  
+2020/6/13  
+
 ## 一. 数据获取
 
 实验所需数据在课程网站上给出，包含四个数据文件，格式如下。
 
 | 文件名称                | 格式                                                         |
 | ----------------------- | ------------------------------------------------------------ |
-| `documents.json`        | {d1_id:  d1_text, d2_id: d2_text, ...}                       |
+| `documents.json`        | {  d1_id:  d1_text, d2_id: d2_text, ... }                    |
 | `trainingset.json`      | {  queries: {q1_id: q1_text, q2_id: q2_text, ...},   labels: {q1_id: [dx_id,...], q2_id2: [dx_id,...], ...} } |
 | `validationset.json`    | {  queries: {q1_id: q1_text, q2_id: q2_text, ...},   labels: {q1_id: [dx_id,...], q2_id2: [dx_id,...], ...} } |
 | `testset_no_label.json` | {  queries: {q1_id: q1_text, q2_id: q2_text, ...}, }         |
@@ -134,7 +140,7 @@ def sim(self, doc, index):
 		d = len(self.docs[index])
 		score += (self.idf[word]*self.f[index][word]*(self.k1+1)
 				/ (self.f[index][word]+self.k1*(1-self.b+self.b*d
-												/ self.avgdl)))
+								/ self.avgdl)))
 	return score
 ```
 
