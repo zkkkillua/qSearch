@@ -2,7 +2,7 @@
 
 ## 声明
 本repository为sdu信息检索技术的课程实验。  
-实验中使用到的data/目录下的数据集以及bm25.py示例模型由山东大学信息检索实验室提供。  
+实验中使用到的data/目录下的数据集以及bm25.py示例模型由[山东大学信息检索实验室](http://ir.sdu.edu.cn/~zhuminchen/ir2020/)提供。  
 sdu Zacky Lee  
 2020/6/13  
 
